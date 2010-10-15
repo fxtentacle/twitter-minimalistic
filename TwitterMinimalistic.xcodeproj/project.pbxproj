@@ -12,8 +12,13 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		C42DCDCA12689FCF00643532 /* MGTwitterEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42DCDC512689FC100643532 /* MGTwitterEngine.framework */; };
+		C42DCE181268A54F00643532 /* LoginWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42DCE171268A54F00643532 /* LoginWindow.xib */; };
 		C42ED4B71268887600779DCC /* LoginWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C42ED4B61268887600779DCC /* LoginWindow.m */; };
+		C43718701268AEC000EAB1F1 /* MGTwitterEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C437186F1268AEC000EAB1F1 /* MGTwitterEngine.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C482EA2B1268BD4C00A0FAD9 /* SSKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C482EA241268BD4C00A0FAD9 /* SSKeychainItem.m */; };
+		C482EA2C1268BD4C00A0FAD9 /* SSInternetKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C482EA271268BD4C00A0FAD9 /* SSInternetKeychainItem.m */; };
+		C482EA2D1268BD4C00A0FAD9 /* SSGenericKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C482EA291268BD4C00A0FAD9 /* SSGenericKeychainItem.m */; };
+		C482EA351268BD6400A0FAD9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C482EA341268BD6400A0FAD9 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,21 +26,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = C42DCDBB12689FC100643532 /* MGTwitterEngine.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = C41569381268819E00B7F462 /* MGTwitterEngine.framework */;
+			remoteGlobalIDString = C41569381268819E00B7F462;
 			remoteInfo = MGTwitterEngine;
 		};
 		C42DCDC612689FC100643532 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C42DCDBB12689FC100643532 /* MGTwitterEngine.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = C42ED4D712688A7000779DCC /* Demo.app */;
+			remoteGlobalIDString = C42ED4D712688A7000779DCC;
 			remoteInfo = Demo;
 		};
 		C42DCDCB12689FD400643532 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C42DCDBB12689FC100643532 /* MGTwitterEngine.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = C41569371268819E00B7F462 /* MGTwitterEngine */;
+			remoteGlobalIDString = C41569371268819E00B7F462;
 			remoteInfo = MGTwitterEngine;
 		};
 /* End PBXContainerItemProxy section */
@@ -54,8 +59,18 @@
 		8D1107310486CEB800E47090 /* TwitterMinimalistic-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TwitterMinimalistic-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TwitterMinimalistic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterMinimalistic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42DCDBB12689FC100643532 /* MGTwitterEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MGTwitterEngine.xcodeproj; path = MGTwitterEngine/MGTwitterEngine.xcodeproj; sourceTree = "<group>"; };
+		C42DCE171268A54F00643532 /* LoginWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginWindow.xib; sourceTree = "<group>"; };
 		C42ED4B51268887600779DCC /* LoginWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWindow.h; sourceTree = "<group>"; };
 		C42ED4B61268887600779DCC /* LoginWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginWindow.m; sourceTree = "<group>"; };
+		C437186F1268AEC000EAB1F1 /* MGTwitterEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGTwitterEngine.framework; path = MGTwitterEngine/build/Debug/MGTwitterEngine.framework; sourceTree = "<group>"; };
+		C482EA241268BD4C00A0FAD9 /* SSKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychainItem.m; path = SSKeyChain/SSKeychainItem.m; sourceTree = "<group>"; };
+		C482EA251268BD4C00A0FAD9 /* SSKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychainItem.h; path = SSKeyChain/SSKeychainItem.h; sourceTree = "<group>"; };
+		C482EA261268BD4C00A0FAD9 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = SSKeyChain/SSKeychain.h; sourceTree = "<group>"; };
+		C482EA271268BD4C00A0FAD9 /* SSInternetKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSInternetKeychainItem.m; path = SSKeyChain/SSInternetKeychainItem.m; sourceTree = "<group>"; };
+		C482EA281268BD4C00A0FAD9 /* SSInternetKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSInternetKeychainItem.h; path = SSKeyChain/SSInternetKeychainItem.h; sourceTree = "<group>"; };
+		C482EA291268BD4C00A0FAD9 /* SSGenericKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSGenericKeychainItem.m; path = SSKeyChain/SSGenericKeychainItem.m; sourceTree = "<group>"; };
+		C482EA2A1268BD4C00A0FAD9 /* SSGenericKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSGenericKeychainItem.h; path = SSKeyChain/SSGenericKeychainItem.h; sourceTree = "<group>"; };
+		C482EA341268BD6400A0FAD9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C42DCDCA12689FCF00643532 /* MGTwitterEngine.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				C43718701268AEC000EAB1F1 /* MGTwitterEngine.framework in Frameworks */,
+				C482EA351268BD6400A0FAD9 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +90,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C482EA221268BD3A00A0FAD9 /* SSKeyChain */,
 				C42ED4B51268887600779DCC /* LoginWindow.h */,
 				C42ED4B61268887600779DCC /* LoginWindow.m */,
 				256AC3D80F4B6AC300CF3369 /* TwitterMinimalisticAppDelegate.h */,
@@ -111,12 +128,13 @@
 		29B97314FDCFA39411CA2CEA /* TwitterMinimalistic */ = {
 			isa = PBXGroup;
 			children = (
-				C42DCDBB12689FC100643532 /* MGTwitterEngine.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				C437186F1268AEC000EAB1F1 /* MGTwitterEngine.framework */,
+				C482EA341268BD6400A0FAD9 /* Security.framework */,
 			);
 			name = TwitterMinimalistic;
 			sourceTree = "<group>";
@@ -133,6 +151,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C42DCE171268A54F00643532 /* LoginWindow.xib */,
 				8D1107310486CEB800E47090 /* TwitterMinimalistic-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -143,6 +162,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C42DCDBB12689FC100643532 /* MGTwitterEngine.xcodeproj */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -156,6 +176,20 @@
 				C42DCDC712689FC100643532 /* Demo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C482EA221268BD3A00A0FAD9 /* SSKeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				C482EA241268BD4C00A0FAD9 /* SSKeychainItem.m */,
+				C482EA251268BD4C00A0FAD9 /* SSKeychainItem.h */,
+				C482EA261268BD4C00A0FAD9 /* SSKeychain.h */,
+				C482EA271268BD4C00A0FAD9 /* SSInternetKeychainItem.m */,
+				C482EA281268BD4C00A0FAD9 /* SSInternetKeychainItem.h */,
+				C482EA291268BD4C00A0FAD9 /* SSGenericKeychainItem.m */,
+				C482EA2A1268BD4C00A0FAD9 /* SSGenericKeychainItem.h */,
+			);
+			name = SSKeyChain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +261,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				C42DCE181268A54F00643532 /* LoginWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +275,9 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* TwitterMinimalisticAppDelegate.m in Sources */,
 				C42ED4B71268887600779DCC /* LoginWindow.m in Sources */,
+				C482EA2B1268BD4C00A0FAD9 /* SSKeychainItem.m in Sources */,
+				C482EA2C1268BD4C00A0FAD9 /* SSInternetKeychainItem.m in Sources */,
+				C482EA2D1268BD4C00A0FAD9 /* SSGenericKeychainItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +316,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MGTwitterEngine/build/Debug\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -295,6 +337,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MGTwitterEngine/build/Debug\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TwitterMinimalistic_Prefix.pch;

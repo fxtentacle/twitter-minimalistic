@@ -19,6 +19,7 @@
 }
 
 - (IBAction)enteredPin: (id)sender {
+	[NSApp stopModal];
 }
 
 

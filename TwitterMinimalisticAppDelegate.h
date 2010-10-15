@@ -7,8 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <MGTwitterEngine/MGTwitterEngine.h>
 
-@interface TwitterMinimalisticAppDelegate : NSObject <NSApplicationDelegate> {
+@interface TwitterMinimalisticAppDelegate : NSObject <NSApplicationDelegate, MGTwitterEngineDelegate> {
+    MGTwitterEngine *twitterEngine;
+	
+	OAToken *token;
+
     NSWindow *window;
 }
 
