@@ -7,14 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <MGTwitterEngine/MGTwitterEngine.h>
 
-@interface TwitterMinimalisticAppDelegate : NSObject <NSApplicationDelegate, MGTwitterEngineDelegate> {
-    MGTwitterEngine *twitterEngine;
-	
-	OAToken *token;
-
-    NSWindow *window;
+@interface TwitterMinimalisticAppDelegate : NSObject <NSApplicationDelegate> {
+    NSWindow* window;
+	NSArray* users;
 }
 
 @property (assign) IBOutlet NSWindow *window;

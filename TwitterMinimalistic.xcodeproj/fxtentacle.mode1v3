@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -267,6 +265,7 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>C482EA221268BD3A00A0FAD9</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
@@ -280,6 +279,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>15</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -314,12 +315,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TwitterMinimalisticAppDelegate.m</string>
+								<string>TwitterForOneUser.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +330,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TwitterMinimalisticAppDelegate.m</string>
+										<string>TwitterForOneUser.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C482EA331268BD5F00A0FAD9</string>
+										<string>C4739E9E1268C2A40036B279</string>
 										<key>history</key>
 										<array>
 											<string>C42ED4BC126888C800779DCC</string>
@@ -344,8 +347,17 @@
 											<string>C43716D41268AACD00EAB1F1</string>
 											<string>C437182D1268ADCB00EAB1F1</string>
 											<string>C437188B1268AEE300EAB1F1</string>
-											<string>C482EA1E1268BB8900A0FAD9</string>
-											<string>C482EA1F1268BB8900A0FAD9</string>
+											<string>C482EA671268C1E000A0FAD9</string>
+											<string>C482EA681268C1E000A0FAD9</string>
+											<string>C482EA691268C1E000A0FAD9</string>
+											<string>C482EA6A1268C1E000A0FAD9</string>
+											<string>C482EA6B1268C1E000A0FAD9</string>
+											<string>C482EA6C1268C1E000A0FAD9</string>
+											<string>C482EA841268C29B00A0FAD9</string>
+											<string>C482EA861268C29B00A0FAD9</string>
+											<string>C482EA871268C29B00A0FAD9</string>
+											<string>C482EA881268C29B00A0FAD9</string>
+											<string>C482EA8A1268C29B00A0FAD9</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -357,14 +369,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1712, 522}}</string>
+								<string>{{0, 0}, {1712, 512}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 140 1920 1038 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>522pt</string>
+							<string>512pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -377,14 +389,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 527}, {1712, 470}}</string>
+								<string>{{0, 517}, {1712, 480}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 140 1920 1038 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>470pt</string>
+							<string>480pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -403,9 +415,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>C482E9F51268BB0800A0FAD9</string>
+				<string>C4739E9F1268C2A40036B279</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>C482E9F61268BB0800A0FAD9</string>
+				<string>C4739EA01268C2A40036B279</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -543,10 +555,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>C482EA001268BB0800A0FAD9</string>
-		<string>C482EA011268BB0800A0FAD9</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>C4156A451268878800B7F462</string>
 		<string>/Volumes/Important/gitosis/twitter-minimalistic/TwitterMinimalistic.xcodeproj</string>
 	</array>
@@ -572,7 +580,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TwitterMinimalisticAppDelegate.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -589,8 +597,6 @@
 							<string>402pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -630,7 +636,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>C4156A451268878800B7F462</string>
-				<string>C482E9F71268BB0800A0FAD9</string>
+				<string>C4739EA11268C2A40036B279</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -885,6 +891,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -930,7 +938,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
