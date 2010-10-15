@@ -13,10 +13,19 @@
 	NSMenu *statusMenu;
     NSStatusItem * statusItem;
 	
-	NSArray* users;
+	NSMenuItem *newTweetMenuItem;	
+	NSMenuItem *logOutMenuItem;	
+
+	NSMutableArray* users;
 }
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSMenu *statusMenu;
+@property (assign) IBOutlet NSMenuItem *newTweetMenuItem;
+@property (assign) IBOutlet NSMenuItem *logOutMenuItem;
+
+- (void) removeUser: (id)user;
+- (void) updateUserBasedStuff;
+- (IBAction) addAccount: (id)sender;
 
 @end
