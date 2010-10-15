@@ -281,8 +281,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>13</integer>
-									<integer>1</integer>
+									<integer>21</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -336,35 +335,38 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C4F96AA01268DAD700EAF8D7</string>
+										<string>C4F96BCE1268E9C500EAF8D7</string>
 										<key>history</key>
 										<array>
 											<string>C42ED4BC126888C800779DCC</string>
 											<string>C42ED4BE126888C800779DCC</string>
 											<string>C42DCDE61268A38600643532</string>
 											<string>C43716371268A73600EAB1F1</string>
-											<string>C43716851268AA4500EAB1F1</string>
 											<string>C43716BB1268AAB300EAB1F1</string>
 											<string>C43716D31268AACD00EAB1F1</string>
 											<string>C437188B1268AEE300EAB1F1</string>
 											<string>C482EA671268C1E000A0FAD9</string>
 											<string>C482EA681268C1E000A0FAD9</string>
 											<string>C482EA691268C1E000A0FAD9</string>
-											<string>C482EA6A1268C1E000A0FAD9</string>
-											<string>C482EA6B1268C1E000A0FAD9</string>
 											<string>C482EA6C1268C1E000A0FAD9</string>
 											<string>C4739FE21268C3910036B279</string>
-											<string>C4F969081268CA8600EAF8D7</string>
-											<string>C4F969171268CD2E00EAF8D7</string>
-											<string>C4F969991268D32400EAF8D7</string>
-											<string>C4F9699B1268D32400EAF8D7</string>
 											<string>C4F969CC1268D48200EAF8D7</string>
-											<string>C4F969D71268D48D00EAF8D7</string>
 											<string>C4F96A901268D97E00EAF8D7</string>
 											<string>C4F96A931268D97E00EAF8D7</string>
-											<string>C4F96A9D1268DAD700EAF8D7</string>
-											<string>C4F96A9E1268DAD700EAF8D7</string>
-											<string>C4F96A9F1268DAD700EAF8D7</string>
+											<string>C4F96AA61268DB0200EAF8D7</string>
+											<string>C4F96ABD1268DCE600EAF8D7</string>
+											<string>C4F96ABE1268DCE600EAF8D7</string>
+											<string>C4F96ADC1268DEAC00EAF8D7</string>
+											<string>C4F96ADE1268DEAC00EAF8D7</string>
+											<string>C4F96B851268E69600EAF8D7</string>
+											<string>C4F96B871268E69600EAF8D7</string>
+											<string>C4F96B891268E69600EAF8D7</string>
+											<string>C4F96BAA1268E7FD00EAF8D7</string>
+											<string>C4F96BAB1268E7FD00EAF8D7</string>
+											<string>C4F96BAC1268E7FD00EAF8D7</string>
+											<string>C4F96BAD1268E7FD00EAF8D7</string>
+											<string>C4F96BAE1268E7FD00EAF8D7</string>
+											<string>C4F96BCD1268E9C500EAF8D7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -565,8 +567,8 @@
 		<string>C4F96A4B1268D69700EAF8D7</string>
 		<string>C4F969461268CD9F00EAF8D7</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>C4156A451268878800B7F462</string>
 		<string>C4F969451268CD9F00EAF8D7</string>
+		<string>C4156A451268878800B7F462</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Volumes/Important/gitosis/twitter-minimalistic/TwitterMinimalistic.xcodeproj</string>
 	</array>
@@ -592,7 +594,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>AddAccountWindow.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -609,6 +611,8 @@
 							<string>402pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -661,7 +665,7 @@
 			<key>WindowToolGUID</key>
 			<string>C4156A451268878800B7F462</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

@@ -20,7 +20,8 @@
 		C482EA2D1268BD4C00A0FAD9 /* SSGenericKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C482EA291268BD4C00A0FAD9 /* SSGenericKeychainItem.m */; };
 		C482EA351268BD6400A0FAD9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C482EA341268BD6400A0FAD9 /* Security.framework */; };
 		C482EA3C1268BDED00A0FAD9 /* TwitterForOneUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C482EA3B1268BDED00A0FAD9 /* TwitterForOneUser.m */; };
-		C4F969241268CD7900EAF8D7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4F969231268CD7900EAF8D7 /* Info.plist */; };
+		C4F96B841268E5EE00EAF8D7 /* AddAccountWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F96B831268E5EE00EAF8D7 /* AddAccountWindow.m */; };
+		C4F96BBA1268E86C00EAF8D7 /* AddAccountWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F96BB91268E86C00EAF8D7 /* AddAccountWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +88,9 @@
 		C482EA341268BD6400A0FAD9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C482EA3A1268BDED00A0FAD9 /* TwitterForOneUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterForOneUser.h; sourceTree = "<group>"; };
 		C482EA3B1268BDED00A0FAD9 /* TwitterForOneUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterForOneUser.m; sourceTree = "<group>"; };
-		C4F969231268CD7900EAF8D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F96B821268E5EE00EAF8D7 /* AddAccountWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAccountWindow.h; sourceTree = "<group>"; };
+		C4F96B831268E5EE00EAF8D7 /* AddAccountWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAccountWindow.m; sourceTree = "<group>"; };
+		C4F96BB91268E86C00EAF8D7 /* AddAccountWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAccountWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				256AC3D90F4B6AC300CF3369 /* TwitterMinimalisticAppDelegate.m */,
 				C482EA3A1268BDED00A0FAD9 /* TwitterForOneUser.h */,
 				C482EA3B1268BDED00A0FAD9 /* TwitterForOneUser.m */,
+				C4F96B821268E5EE00EAF8D7 /* AddAccountWindow.h */,
+				C4F96B831268E5EE00EAF8D7 /* AddAccountWindow.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -172,7 +177,7 @@
 				8D1107310486CEB800E47090 /* TwitterMinimalistic-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
-				C4F969231268CD7900EAF8D7 /* Info.plist */,
+				C4F96BB91268E86C00EAF8D7 /* AddAccountWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -281,7 +286,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				C42DCE181268A54F00643532 /* LoginWindow.xib in Resources */,
-				C4F969241268CD7900EAF8D7 /* Info.plist in Resources */,
+				C4F96BBA1268E86C00EAF8D7 /* AddAccountWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +304,7 @@
 				C482EA2C1268BD4C00A0FAD9 /* SSInternetKeychainItem.m in Sources */,
 				C482EA2D1268BD4C00A0FAD9 /* SSGenericKeychainItem.m in Sources */,
 				C482EA3C1268BDED00A0FAD9 /* TwitterForOneUser.m in Sources */,
+				C4F96B841268E5EE00EAF8D7 /* AddAccountWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
