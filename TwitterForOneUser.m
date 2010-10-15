@@ -36,7 +36,7 @@
     
     // Create a TwitterEngine and set our login details.
     twitterEngine = [[MGTwitterEngine alloc] initWithDelegate:self];
-	[twitterEngine setUsesSecureConnection:YES];
+	[twitterEngine setUsesSecureConnection:NO];
 	[twitterEngine setConsumerKey:consumerKey secret:consumerSecret];
 	
 	// This has been undepreciated for the purposes of dealing with Lists.
@@ -72,9 +72,16 @@
 
 
 
+- (void)updateStatus:(NSTimer *)theTimer
+{
+    [twitterEngine getHomeTimelineSinceID:0 startingAtPage:0 count:20];
+} 
+
+
 
 - (void)dealloc
 {
+	[updateTimer invalidate];
     [twitterEngine release];
     [super dealloc];
 }
@@ -113,6 +120,7 @@
 	NSLog(@"Access token received! %@",aToken);
 	
 	token = [aToken retain];
+	[twitterEngine setAccessToken:token];
 	[SSGenericKeychainItem setPassword: [token key] forUsername: username serviceName: STORE_KEY];
 	[SSGenericKeychainItem setPassword: [token secret] forUsername: username serviceName: STORE_SECRET];
 	
@@ -121,9 +129,88 @@
 	 description:[NSString stringWithFormat:@"User %@ successfully logged in.", username]
 	 notificationName:@"UserLogin"
 	 iconData:nil
-	 priority:0
+	 priority:1
 	 isSticky:NO
 	 clickContext:nil];
+	
+	updateTimer = [NSTimer scheduledTimerWithTimeInterval:30.0 target: self selector:@selector(updateStatus:) userInfo: nil repeats: YES];
+	[self updateStatus: updateTimer];
+}
+
+
+- (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier
+{
+    NSLog(@"Got statuses for %@:\r%@", connectionIdentifier, statuses);
+	
+	for(NSDictionary* status in statuses) {
+		/*
+		 {
+		 contributors = "";
+		 coordinates = "";
+		 "created_at" = 2010-10-14 21:47:50 +0200;
+		 favorited = false;
+		 geo = "";
+		 id = 27379283219;
+		 "in_reply_to_screen_name" = "";
+		 "in_reply_to_status_id" = "";
+		 "in_reply_to_user_id" = "";
+		 place =         {
+		 };
+		 "retweet_count" = "";
+		 retweeted = false;
+		 source = web;
+		 "source_api_request_type" = 1;
+		 text = "Finally reclaimed my beloved nickname :)";
+		 truncated = 0;
+		 user =         {
+		 "contributors_enabled" = false;
+		 "created_at" = 2008-09-23 12:00:28 +0200;
+		 description = "";
+		 "favourites_count" = 0;
+		 "follow_request_sent" = false;
+		 "followers_count" = 0;
+		 following = 0;
+		 "friends_count" = 0;
+		 "geo_enabled" = false;
+		 id = 16418140;
+		 lang = en;
+		 "listed_count" = 0;
+		 location = "";
+		 name = fxtentacle;
+		 notifications = false;
+		 "profile_background_color" = C0DEED;
+		 "profile_background_image_url" = "http://s.twimg.com/a/1287010001/images/themes/theme1/bg.png";
+		 "profile_background_tile" = false;
+		 "profile_image_url" = "http://s.twimg.com/a/1287010001/images/default_profile_4_normal.png";
+		 "profile_link_color" = 0084B4;
+		 "profile_sidebar_border_color" = C0DEED;
+		 "profile_sidebar_fill_color" = DDEEF6;
+		 "profile_text_color" = 333333;
+		 "profile_use_background_image" = true;
+		 protected = 0;
+		 "screen_name" = fxtentacle;
+		 "show_all_inline_media" = false;
+		 "statuses_count" = 2;
+		 "time_zone" = "";
+		 url = "";
+		 "utc_offset" = "";
+		 verified = false;
+		 };
+		 },
+		 */
+		NSDictionary* user = [status objectForKey:@"user"];
+		NSURL *url = [NSURL URLWithString: [user objectForKey:@"profile_image_url"]];
+		NSData *userImage = [NSData dataWithContentsOfURL:url];
+
+		[GrowlApplicationBridge
+		 notifyWithTitle:[user objectForKey:@"name"]
+		 description:[status objectForKey:@"text"]
+		 notificationName:@"NewTweetReceived"
+		 iconData:userImage
+		 priority:0
+		 isSticky:NO
+		 clickContext:nil];		
+	}
 }
 
 - (void)requestSucceeded:(NSString *)connectionIdentifier
@@ -141,10 +228,6 @@
 }
 
 
-- (void)statusesReceived:(NSArray *)statuses forRequest:(NSString *)connectionIdentifier
-{
-    NSLog(@"Got statuses for %@:\r%@", connectionIdentifier, statuses);
-}
 
 
 - (void)directMessagesReceived:(NSArray *)messages forRequest:(NSString *)connectionIdentifier
