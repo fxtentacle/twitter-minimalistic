@@ -349,6 +349,7 @@
 				GCC_PREFIX_HEADER = TwitterMinimalistic_Prefix.pch;
 				INFOPLIST_FILE = "TwitterMinimalistic-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "-fno-stack-protector";
 				OTHER_LDFLAGS = (
 					"-framework",
 					MGTwitterEngine,
@@ -371,6 +372,7 @@
 				GCC_PREFIX_HEADER = TwitterMinimalistic_Prefix.pch;
 				INFOPLIST_FILE = "TwitterMinimalistic-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "-fno-stack-protector";
 				OTHER_LDFLAGS = (
 					"-framework",
 					MGTwitterEngine,

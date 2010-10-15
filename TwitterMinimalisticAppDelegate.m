@@ -16,8 +16,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	TwitterForOneUser* twitA = [[TwitterForOneUser alloc] initializeForUsername: @"fxtentacle"];
-	TwitterForOneUser* twitB = [[TwitterForOneUser alloc] initializeForUsername: @"spratpix"];
-	users = [NSArray arrayWithObjects: twitA, twitB, nil];
+	//TwitterForOneUser* twitB = [[TwitterForOneUser alloc] initializeForUsername: @"spratpix"];
+	users = [NSArray arrayWithObjects: twitA,  nil]; //twitB,
 }
 
 -(void)awakeFromNib{
