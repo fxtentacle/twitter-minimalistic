@@ -25,6 +25,8 @@
 		C4F96BD11268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = C4F96BD01268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict */; };
 		C4F96D071268EE0D00EAF8D7 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F96D061268EE0D00EAF8D7 /* Growl.framework */; };
 		C4F96D0F1268EE1300EAF8D7 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4F96D061268EE0D00EAF8D7 /* Growl.framework */; };
+		C4F96E431268FFB800EAF8D7 /* NewTweetWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F96E421268FFB800EAF8D7 /* NewTweetWindow.m */; };
+		C4F96E451268FFE100EAF8D7 /* NewTweetWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F96E441268FFE100EAF8D7 /* NewTweetWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,9 @@
 		C4F96BB91268E86C00EAF8D7 /* AddAccountWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAccountWindow.xib; sourceTree = "<group>"; };
 		C4F96BD01268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		C4F96D061268EE0D00EAF8D7 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = GrowlFrameworks/Growl.framework; sourceTree = "<group>"; };
+		C4F96E411268FFB800EAF8D7 /* NewTweetWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTweetWindow.h; sourceTree = "<group>"; };
+		C4F96E421268FFB800EAF8D7 /* NewTweetWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTweetWindow.m; sourceTree = "<group>"; };
+		C4F96E441268FFE100EAF8D7 /* NewTweetWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTweetWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +130,8 @@
 				C482EA3B1268BDED00A0FAD9 /* TwitterForOneUser.m */,
 				C4F96B821268E5EE00EAF8D7 /* AddAccountWindow.h */,
 				C4F96B831268E5EE00EAF8D7 /* AddAccountWindow.m */,
+				C4F96E411268FFB800EAF8D7 /* NewTweetWindow.h */,
+				C4F96E421268FFB800EAF8D7 /* NewTweetWindow.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -187,6 +194,7 @@
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				C4F96BB91268E86C00EAF8D7 /* AddAccountWindow.xib */,
 				C4F96BD01268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict */,
+				C4F96E441268FFE100EAF8D7 /* NewTweetWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 				C42DCE181268A54F00643532 /* LoginWindow.xib in Resources */,
 				C4F96BBA1268E86C00EAF8D7 /* AddAccountWindow.xib in Resources */,
 				C4F96BD11268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict in Resources */,
+				C4F96E451268FFE100EAF8D7 /* NewTweetWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +324,7 @@
 				C482EA2D1268BD4C00A0FAD9 /* SSGenericKeychainItem.m in Sources */,
 				C482EA3C1268BDED00A0FAD9 /* TwitterForOneUser.m in Sources */,
 				C4F96B841268E5EE00EAF8D7 /* AddAccountWindow.m in Sources */,
+				C4F96E431268FFB800EAF8D7 /* NewTweetWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

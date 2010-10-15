@@ -9,6 +9,7 @@
 #import "TwitterForOneUser.h"
 #import "SSKeychain.h"
 #import "LoginWindow.h"
+#import "NewTweetWindow.h"
 #import "TwitterMinimalisticAppDelegate.h"
 #import "Growl-WithInstaller/GrowlApplicationBridge.h"
 
@@ -62,6 +63,21 @@
 
 - (void)newTweet: (id)sender {
 	NSLog(@"newTweet for user %@",username);
+
+	NewTweetWindow* newTweet = [[NewTweetWindow alloc] initWithWindowNibName: @"NewTweetWindow"];
+	NSWindow* wnd = [newTweet window];
+	[wnd setTitle:[NSString stringWithFormat:@"New tweet for user %@", username]];
+	
+	[NSApp runModalForWindow: wnd];	
+	[NSApp endSheet: wnd];
+	[wnd orderOut: self];
+	
+	NSString* tweet = [[newTweet tweet] stringValue];
+	if( [tweet length] > 0 ) {
+		[twitterEngine sendUpdate:tweet];
+	}
+	
+	[newTweet autorelease];
 }
 
 - (void)logOut: (id)sender {
