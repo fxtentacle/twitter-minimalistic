@@ -22,6 +22,9 @@
 		C482EA3C1268BDED00A0FAD9 /* TwitterForOneUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C482EA3B1268BDED00A0FAD9 /* TwitterForOneUser.m */; };
 		C4F96B841268E5EE00EAF8D7 /* AddAccountWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F96B831268E5EE00EAF8D7 /* AddAccountWindow.m */; };
 		C4F96BBA1268E86C00EAF8D7 /* AddAccountWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F96BB91268E86C00EAF8D7 /* AddAccountWindow.xib */; };
+		C4F96BD11268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = C4F96BD01268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict */; };
+		C4F96D071268EE0D00EAF8D7 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4F96D061268EE0D00EAF8D7 /* Growl.framework */; };
+		C4F96D0F1268EE1300EAF8D7 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4F96D061268EE0D00EAF8D7 /* Growl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C4F96D0F1268EE1300EAF8D7 /* Growl.framework in CopyFiles */,
 				C4748DD81268C5840036FFDB /* MGTwitterEngine.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +95,8 @@
 		C4F96B821268E5EE00EAF8D7 /* AddAccountWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAccountWindow.h; sourceTree = "<group>"; };
 		C4F96B831268E5EE00EAF8D7 /* AddAccountWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAccountWindow.m; sourceTree = "<group>"; };
 		C4F96BB91268E86C00EAF8D7 /* AddAccountWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAccountWindow.xib; sourceTree = "<group>"; };
+		C4F96BD01268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		C4F96D061268EE0D00EAF8D7 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = GrowlFrameworks/Growl.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F96D071268EE0D00EAF8D7 /* Growl.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				C482EA351268BD6400A0FAD9 /* Security.framework in Frameworks */,
 			);
@@ -127,6 +134,7 @@
 			children = (
 				C482EA341268BD6400A0FAD9 /* Security.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				C4F96D061268EE0D00EAF8D7 /* Growl.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				C4F96BB91268E86C00EAF8D7 /* AddAccountWindow.xib */,
+				C4F96BD01268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -287,6 +296,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				C42DCE181268A54F00643532 /* LoginWindow.xib in Resources */,
 				C4F96BBA1268E86C00EAF8D7 /* AddAccountWindow.xib in Resources */,
+				C4F96BD11268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +356,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/MGTwitterEngine/build/Debug\"",
+					"\"$(SRCROOT)/GrowlFrameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -372,6 +383,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/MGTwitterEngine/build/Debug\"",
+					"\"$(SRCROOT)/GrowlFrameworks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

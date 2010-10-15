@@ -11,6 +11,7 @@
 #import "SSKeychain.h"
 #import "AddAccountWindow.h"
 
+
 #define STORE_USERS @"twitter-minimalistic-users" 
 
 
@@ -29,10 +30,15 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	// init growl
+	[GrowlApplicationBridge setGrowlDelegate:self];
+	
+	//init users
 	NSString* usersStr = [SSGenericKeychainItem passwordForUsername:@"users" serviceName:STORE_USERS];
 	if(usersStr == nil) usersStr = @"";
 	NSArray* usersNames = [usersStr componentsSeparatedByString: @"/"];
 	
+	//connect users
 	users = [[NSMutableArray alloc] init];
 	for(NSString *cur in usersNames) {
 		if([cur length] < 3) continue;

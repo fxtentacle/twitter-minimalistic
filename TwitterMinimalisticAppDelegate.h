@@ -7,8 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Growl-WithInstaller/GrowlApplicationBridge.h"
 
-@interface TwitterMinimalisticAppDelegate : NSObject <NSApplicationDelegate> {
+@interface TwitterMinimalisticAppDelegate : NSObject <NSApplicationDelegate, GrowlApplicationBridgeDelegate> {
     NSWindow* window;
 	NSMenu *statusMenu;
     NSStatusItem * statusItem;

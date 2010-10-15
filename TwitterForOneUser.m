@@ -10,6 +10,7 @@
 #import "SSKeychain.h"
 #import "LoginWindow.h"
 #import "TwitterMinimalisticAppDelegate.h"
+#import "Growl-WithInstaller/GrowlApplicationBridge.h"
 
 #define STORE_KEY @"twitter-minimalistic-key" 
 #define STORE_SECRET @"twitter-minimalistic-key" 
@@ -114,6 +115,15 @@
 	token = [aToken retain];
 	[SSGenericKeychainItem setPassword: [token key] forUsername: username serviceName: STORE_KEY];
 	[SSGenericKeychainItem setPassword: [token secret] forUsername: username serviceName: STORE_SECRET];
+	
+	[GrowlApplicationBridge
+	 notifyWithTitle:username
+	 description:[NSString stringWithFormat:@"User %@ successfully logged in.", username]
+	 notificationName:@"UserLogin"
+	 iconData:nil
+	 priority:0
+	 isSticky:NO
+	 clickContext:nil];
 }
 
 - (void)requestSucceeded:(NSString *)connectionIdentifier
