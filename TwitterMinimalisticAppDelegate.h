@@ -10,9 +10,13 @@
 
 @interface TwitterMinimalisticAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow* window;
+	NSMenu *statusMenu;
+    NSStatusItem * statusItem;
+	
 	NSArray* users;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSMenu *statusMenu;
 
 @end

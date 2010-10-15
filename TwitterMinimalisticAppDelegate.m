@@ -12,14 +12,19 @@
 @implementation TwitterMinimalisticAppDelegate
 
 @synthesize window;
+@synthesize statusMenu;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	TwitterForOneUser* twitA = [[TwitterForOneUser alloc] initializeForUsername: @"fxtentacle"];
 	TwitterForOneUser* twitB = [[TwitterForOneUser alloc] initializeForUsername: @"spratpix"];
-	users = [[NSArray alloc] arrayWithObjects: twitA, twitB, nil];
+	users = [NSArray arrayWithObjects: twitA, twitB, nil];
 }
 
-
-
+-(void)awakeFromNib{
+	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+	[statusItem setMenu:statusMenu];
+	[statusItem setTitle:@"Status"];
+	[statusItem setHighlightMode:YES];
+}
 
 @end
