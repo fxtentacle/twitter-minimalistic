@@ -10,6 +10,7 @@
 #import <MGTwitterEngine/MGTwitterEngine.h>
 
 @interface TwitterForOneUser : NSObject<MGTwitterEngineDelegate> {
+	id myApp;
     MGTwitterEngine *twitterEngine;
 	NSString* username;
 	OAToken *token;
@@ -17,6 +18,10 @@
 
 @property (readonly, copy) NSString* username;
 
-- (id)initializeForUsername:(NSString*) username;
+- (id)initializeForUsername:(NSString*) username andApp: (id) app;
++ (void)removeAuthorizationForUsername:(NSString*) username;
+
+- (void)newTweet: (id)sender;
+- (void)logOut: (id)sender;
 
 @end

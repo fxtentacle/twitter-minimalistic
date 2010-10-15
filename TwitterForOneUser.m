@@ -9,6 +9,7 @@
 #import "TwitterForOneUser.h"
 #import "SSKeychain.h"
 #import "LoginWindow.h"
+#import "TwitterMinimalisticAppDelegate.h"
 
 #define STORE_KEY @"twitter-minimalistic-key" 
 #define STORE_SECRET @"twitter-minimalistic-key" 
@@ -16,8 +17,9 @@
 @implementation TwitterForOneUser
 @synthesize username;
 
-- (id)initializeForUsername:(NSString*) userNameToSet {	
-	 username = [userNameToSet copy];
+- (id)initializeForUsername:(NSString*) userNameToSet andApp: (id)app {	
+	username = [userNameToSet copy];
+	myApp = app;
 	
 	NSString *consumerKey = nil;
 	NSString *consumerSecret = nil;
@@ -43,7 +45,7 @@
 	NSString* key = [SSGenericKeychainItem passwordForUsername:username serviceName:STORE_KEY];
 	NSString* secret = [SSGenericKeychainItem passwordForUsername:username serviceName:STORE_SECRET];
 	
-	if(key != nil && secret != nil) {
+	if(key != nil && secret != nil && [key length] > 4 && [secret length] > 4) {
 		OAToken* tt = [[OAToken alloc] initWithKey:key secret:secret];
 		[self accessTokenReceived: tt forRequest: nil];
 	} else {
@@ -51,6 +53,23 @@
 	}
 	return self;
 }
+
++ (void)removeAuthorizationForUsername:(NSString*) usernameToUse {
+	[SSGenericKeychainItem setPassword:@"" forUsername: usernameToUse serviceName: STORE_KEY];
+	[SSGenericKeychainItem setPassword:@"" forUsername: usernameToUse serviceName: STORE_SECRET];
+}
+
+- (void)newTweet: (id)sender {
+	NSLog(@"newTweet for user %@",username);
+}
+
+- (void)logOut: (id)sender {
+	NSLog(@"logOut for user %@",username);
+	[TwitterForOneUser removeAuthorizationForUsername: username];
+	[(TwitterMinimalisticAppDelegate*)myApp removeUser: self];
+}
+
+
 
 
 - (void)dealloc
@@ -71,11 +90,19 @@
 	[twitterEngine openAuthorizePageForRequestToken: token];
 	
 	LoginWindow* login = [[LoginWindow alloc] initWithWindowNibName: @"LoginWindow"];
+	[login setUsername:username];
 	NSWindow* wnd = [login window];
 	
 	[NSApp runModalForWindow: wnd];	
 	[NSApp endSheet: wnd];
 	[wnd orderOut: self];
+	
+	NSString* pinCode = [[login pinCode] stringValue];
+	if([pinCode length] < 3) 
+		[twitterEngine getRequestToken];
+	else
+		[twitterEngine getAccessTokenForRequestToken:token pin: pinCode];
+
 	[login autorelease];
 }
 
