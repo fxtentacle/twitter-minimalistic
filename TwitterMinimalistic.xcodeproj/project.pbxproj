@@ -27,6 +27,7 @@
 		C4F96D0F1268EE1300EAF8D7 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4F96D061268EE0D00EAF8D7 /* Growl.framework */; };
 		C4F96E431268FFB800EAF8D7 /* NewTweetWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F96E421268FFB800EAF8D7 /* NewTweetWindow.m */; };
 		C4F96E451268FFE100EAF8D7 /* NewTweetWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F96E441268FFE100EAF8D7 /* NewTweetWindow.xib */; };
+		C4F96E6E1269046C00EAF8D7 /* Tomboy.icns in Resources */ = {isa = PBXBuildFile; fileRef = C4F96E6D1269046C00EAF8D7 /* Tomboy.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +80,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* TwitterMinimalistic-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TwitterMinimalistic-Info.plist"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* TwitterMinimalistic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterMinimalistic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* TwiMin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwiMin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42DCDBB12689FC100643532 /* MGTwitterEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MGTwitterEngine.xcodeproj; path = MGTwitterEngine/MGTwitterEngine.xcodeproj; sourceTree = "<group>"; };
 		C42DCE171268A54F00643532 /* LoginWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginWindow.xib; sourceTree = "<group>"; };
 		C42ED4B51268887600779DCC /* LoginWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWindow.h; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		C4F96E411268FFB800EAF8D7 /* NewTweetWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTweetWindow.h; sourceTree = "<group>"; };
 		C4F96E421268FFB800EAF8D7 /* NewTweetWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTweetWindow.m; sourceTree = "<group>"; };
 		C4F96E441268FFE100EAF8D7 /* NewTweetWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTweetWindow.xib; sourceTree = "<group>"; };
+		C4F96E6D1269046C00EAF8D7 /* Tomboy.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Tomboy.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +161,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* TwitterMinimalistic.app */,
+				8D1107320486CEB800E47090 /* TwiMin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +190,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4F96E6D1269046C00EAF8D7 /* Tomboy.icns */,
 				C42DCE171268A54F00643532 /* LoginWindow.xib */,
 				8D1107310486CEB800E47090 /* TwitterMinimalistic-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -235,9 +238,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* TwitterMinimalistic */ = {
+		8D1107260486CEB800E47090 /* TwiMin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TwitterMinimalistic" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TwiMin" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -249,10 +252,10 @@
 			dependencies = (
 				C42DCDCC12689FD400643532 /* PBXTargetDependency */,
 			);
-			name = TwitterMinimalistic;
+			name = TwiMin;
 			productInstallPath = "$(HOME)/Applications";
 			productName = TwitterMinimalistic;
-			productReference = 8D1107320486CEB800E47090 /* TwitterMinimalistic.app */;
+			productReference = 8D1107320486CEB800E47090 /* TwiMin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +276,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* TwitterMinimalistic */,
+				8D1107260486CEB800E47090 /* TwiMin */,
 			);
 		};
 /* End PBXProject section */
@@ -306,6 +309,7 @@
 				C4F96BBA1268E86C00EAF8D7 /* AddAccountWindow.xib in Resources */,
 				C4F96BD11268EACE00EAF8D7 /* Growl Registration Ticket.growlRegDict in Resources */,
 				C4F96E451268FFE100EAF8D7 /* NewTweetWindow.xib in Resources */,
+				C4F96E6E1269046C00EAF8D7 /* Tomboy.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +385,7 @@
 					"-framework",
 					MGTwitterEngine,
 				);
-				PRODUCT_NAME = TwitterMinimalistic;
+				PRODUCT_NAME = TwiMin;
 			};
 			name = Debug;
 		};
@@ -405,7 +409,7 @@
 					"-framework",
 					MGTwitterEngine,
 				);
-				PRODUCT_NAME = TwitterMinimalistic;
+				PRODUCT_NAME = TwiMin;
 			};
 			name = Release;
 		};
@@ -438,7 +442,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TwitterMinimalistic" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TwiMin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,

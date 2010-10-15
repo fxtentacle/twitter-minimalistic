@@ -278,9 +278,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
-									<integer>23</integer>
-									<integer>0</integer>
+									<integer>45</integer>
+									<integer>44</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -314,14 +313,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TwitterForOneUser.m</string>
+								<string>TwitterMinimalistic-Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TwitterForOneUser.m</string>
+										<string>TwitterMinimalistic-Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C4F96E6C1269031300EAF8D7</string>
+										<string>C4F96E871269050C00EAF8D7</string>
 										<key>history</key>
 										<array>
 											<string>C42ED4BC126888C800779DCC</string>
@@ -349,7 +346,6 @@
 											<string>C4739FE21268C3910036B279</string>
 											<string>C4F969CC1268D48200EAF8D7</string>
 											<string>C4F96ABD1268DCE600EAF8D7</string>
-											<string>C4F96ABE1268DCE600EAF8D7</string>
 											<string>C4F96B851268E69600EAF8D7</string>
 											<string>C4F96B871268E69600EAF8D7</string>
 											<string>C4F96CF71268ED3800EAF8D7</string>
@@ -369,7 +365,8 @@
 											<string>C4F96E531269019600EAF8D7</string>
 											<string>C4F96E541269019600EAF8D7</string>
 											<string>C4F96E5E1269021B00EAF8D7</string>
-											<string>C4F96E5F1269021B00EAF8D7</string>
+											<string>C4F96E7E126904D400EAF8D7</string>
+											<string>C4F96ABE1268DCE600EAF8D7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
