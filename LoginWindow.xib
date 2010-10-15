@@ -41,7 +41,7 @@
 			<object class="NSWindowTemplate" id="113201586">
 				<int key="NSWindowStyleMask">257</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{235, 444}, {151, 115}}</string>
+				<string key="NSWindowRect">{{235, 419}, {151, 140}}</string>
 				<int key="NSWTFlags">611845120</int>
 				<string key="NSWindowTitle">Enter PIN</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -112,13 +112,13 @@
 						<object class="NSTextField" id="534022946">
 							<reference key="NSNextResponder" ref="132220860"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{17, 78}, {66, 17}}</string>
+							<string key="NSFrame">{{17, 103}, {88, 17}}</string>
 							<reference key="NSSuperview" ref="132220860"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="1020165252">
 								<int key="NSCellFlags">68288064</int>
 								<int key="NSCellFlags2">272630784</int>
-								<string key="NSContents">PIN for:</string>
+								<string key="NSContents">Enter PIN for:</string>
 								<reference key="NSSupport" ref="593102139"/>
 								<reference key="NSControlView" ref="534022946"/>
 								<object class="NSColor" key="NSBackgroundColor" id="777154010">
@@ -141,7 +141,7 @@
 						<object class="NSTextField" id="607008420">
 							<reference key="NSNextResponder" ref="132220860"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{69, 78}, {38, 17}}</string>
+							<string key="NSFrame">{{17, 78}, {117, 17}}</string>
 							<reference key="NSSuperview" ref="132220860"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="543603718">
@@ -155,7 +155,7 @@
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{151, 115}</string>
+					<string key="NSFrameSize">{151, 140}</string>
 					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
@@ -248,9 +248,9 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="534022946"/>
+							<reference ref="607008420"/>
 							<reference ref="413963924"/>
 							<reference ref="479170670"/>
-							<reference ref="607008420"/>
 						</object>
 						<reference key="parent" ref="113201586"/>
 					</object>
@@ -340,9 +340,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{436, 541}, {151, 115}}</string>
+					<string>{{436, 516}, {151, 140}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{436, 541}, {151, 115}}</string>
+					<string>{{436, 516}, {151, 140}}</string>
 					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
