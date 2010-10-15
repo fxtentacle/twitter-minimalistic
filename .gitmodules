@@ -1,0 +1,3 @@
+[submodule "MGTwitterEngine"]
+	path = MGTwitterEngine
+	url = git@github.com:fxtentacle/MGTwitterEngine.git
