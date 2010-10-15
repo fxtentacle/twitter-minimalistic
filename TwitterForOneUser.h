@@ -15,6 +15,7 @@
 	NSString* username;
 	OAToken *token;
 	NSTimer* updateTimer;
+	MGTwitterEngineID lastId;
 }
 
 @property (readonly, copy) NSString* username;

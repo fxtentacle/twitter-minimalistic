@@ -13,6 +13,7 @@
 #import "Growl-WithInstaller/GrowlApplicationBridge.h"
 
 #define STORE_KEY @"twitter-minimalistic-OAToken" 
+#define STORE_LAST_ID @"twitter-minimalistic-last-id" 
 
 @implementation TwitterForOneUser
 @synthesize username;
@@ -42,6 +43,10 @@
 	// At present the list API calls require you to specify a user that owns the list.
 	[twitterEngine setUsername:username];
 	
+	NSString* lastIdString = [SSGenericKeychainItem passwordForUsername:username serviceName:STORE_LAST_ID];
+	if(lastIdString == nil) lastIdString = @"0";
+	lastId = [lastIdString longLongValue];
+	
 	OAToken* ttoken = [[OAToken alloc] initWithUserDefaultsUsingServiceProviderName:STORE_KEY prefix:username];
 	if( ttoken != nil ) {
 		[self accessTokenReceived: ttoken forRequest: nil];
@@ -69,7 +74,7 @@
 
 - (void)updateStatus:(NSTimer *)theTimer
 {
-    [twitterEngine getHomeTimelineSinceID:0 startingAtPage:0 count:20];
+    [twitterEngine getHomeTimelineSinceID:lastId startingAtPage:0 count:20];
 } 
 
 
@@ -136,6 +141,7 @@
 {
     NSLog(@"Got statuses for %@:\r%@", connectionIdentifier, statuses);
 	
+	NSString* storeLastId = nil;
 	for(NSDictionary* status in statuses) {
 		/*
 		 {
@@ -192,6 +198,8 @@
 		 };
 		 },
 		 */
+		if(storeLastId == nil)
+			storeLastId = [status objectForKey:@"id"];
 		NSDictionary* user = [status objectForKey:@"user"];
 		NSURL *url = [NSURL URLWithString: [user objectForKey:@"profile_image_url"]];
 		NSData *userImage = [NSData dataWithContentsOfURL:url];
@@ -204,6 +212,11 @@
 		 priority:0
 		 isSticky:NO
 		 clickContext:nil];		
+	}
+	
+	if(storeLastId != nil) {
+		[SSGenericKeychainItem setPassword:storeLastId forUsername:username serviceName:STORE_LAST_ID];
+		lastId = [storeLastId longLongValue];
 	}
 }
 
