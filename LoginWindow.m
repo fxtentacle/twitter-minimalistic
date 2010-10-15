@@ -12,10 +12,10 @@
 @implementation LoginWindow
 
 @synthesize pinCode;
+@synthesize username;
 
 - (void)awakeFromNib 
 {
-    NSLog(@"Awake from Nib");
 }
 
 - (IBAction)enteredPin: (id)sender {

@@ -11,9 +11,11 @@
 
 @interface LoginWindow : NSWindowController {
 	NSTextField *pinCode;
+	NSString* username;
 }
 
 @property (assign) IBOutlet NSTextField *pinCode;
+@property (assign) IBOutlet NSString* username;
 
 - (IBAction)enteredPin: (id)sender;
 
