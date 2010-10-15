@@ -1,3 +1,6 @@
 [submodule "MGTwitterEngine"]
 	path = MGTwitterEngine
 	url = git@github.com:fxtentacle/MGTwitterEngine.git
+[submodule "SSKeyChain"]
+	path = SSKeyChain
+	url = http://github.com/samsoffes/sskeychain.git
