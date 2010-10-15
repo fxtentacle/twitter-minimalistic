@@ -12,8 +12,7 @@
 #import "TwitterMinimalisticAppDelegate.h"
 #import "Growl-WithInstaller/GrowlApplicationBridge.h"
 
-#define STORE_KEY @"twitter-minimalistic-key" 
-#define STORE_SECRET @"twitter-minimalistic-key" 
+#define STORE_KEY @"twitter-minimalistic-OAToken" 
 
 @implementation TwitterForOneUser
 @synthesize username;
@@ -43,12 +42,9 @@
 	// At present the list API calls require you to specify a user that owns the list.
 	[twitterEngine setUsername:username];
 	
-	NSString* key = [SSGenericKeychainItem passwordForUsername:username serviceName:STORE_KEY];
-	NSString* secret = [SSGenericKeychainItem passwordForUsername:username serviceName:STORE_SECRET];
-	
-	if(key != nil && secret != nil && [key length] > 4 && [secret length] > 4) {
-		OAToken* tt = [[OAToken alloc] initWithKey:key secret:secret];
-		[self accessTokenReceived: tt forRequest: nil];
+	OAToken* ttoken = [[OAToken alloc] initWithUserDefaultsUsingServiceProviderName:STORE_KEY prefix:username];
+	if( ttoken != nil ) {
+		[self accessTokenReceived: ttoken forRequest: nil];
 	} else {
 		[twitterEngine getRequestToken];
 	}
@@ -56,8 +52,7 @@
 }
 
 + (void)removeAuthorizationForUsername:(NSString*) usernameToUse {
-	[SSGenericKeychainItem setPassword:@"" forUsername: usernameToUse serviceName: STORE_KEY];
-	[SSGenericKeychainItem setPassword:@"" forUsername: usernameToUse serviceName: STORE_SECRET];
+	[OAToken removeFromUserDefaultsWithServiceProviderName:STORE_KEY prefix:usernameToUse];
 }
 
 - (void)newTweet: (id)sender {
@@ -121,8 +116,7 @@
 	
 	token = [aToken retain];
 	[twitterEngine setAccessToken:token];
-	[SSGenericKeychainItem setPassword: [token key] forUsername: username serviceName: STORE_KEY];
-	[SSGenericKeychainItem setPassword: [token secret] forUsername: username serviceName: STORE_SECRET];
+	[token storeInUserDefaultsWithServiceProviderName:STORE_KEY prefix:username];
 	
 	[GrowlApplicationBridge
 	 notifyWithTitle:username

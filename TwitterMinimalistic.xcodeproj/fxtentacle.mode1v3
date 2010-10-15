@@ -337,7 +337,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C4F96DC21268F8C800EAF8D7</string>
+										<string>C4F96DD81268FA6C00EAF8D7</string>
 										<key>history</key>
 										<array>
 											<string>C42ED4BC126888C800779DCC</string>
@@ -370,7 +370,8 @@
 											<string>C4F96D961268F76C00EAF8D7</string>
 											<string>C4F96DB11268F85800EAF8D7</string>
 											<string>C4F96DC01268F8C800EAF8D7</string>
-											<string>C4F96DC11268F8C800EAF8D7</string>
+											<string>C4F96DCE1268FA2700EAF8D7</string>
+											<string>C4F96DD01268FA2700EAF8D7</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -568,14 +569,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>C4F96DC31268F8C800EAF8D7</string>
+		<string>C4F96DD91268FA6C00EAF8D7</string>
 		<string>C4F96A4B1268D69700EAF8D7</string>
 		<string>C4F969461268CD9F00EAF8D7</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>C4F969451268CD9F00EAF8D7</string>
-		<string>C4156A451268878800B7F462</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
+		<string>C4156A451268878800B7F462</string>
+		<string>C4F969451268CD9F00EAF8D7</string>
 		<string>/Volumes/Important/gitosis/twitter-minimalistic/TwitterMinimalistic.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -917,18 +918,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {823, 294}}</string>
+								<string>{{0, 0}, {1072, 690}}</string>
 								<key>RubberWindowFrame</key>
-								<string>587 686 823 335 0 0 1920 1178 </string>
+								<string>587 290 1072 731 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
 							<key>Proportion</key>
-							<string>294pt</string>
+							<string>690pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>294pt</string>
+					<string>690pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -948,7 +949,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>587 686 823 335 0 0 1920 1178 </string>
+			<string>587 290 1072 731 0 0 1920 1178 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
