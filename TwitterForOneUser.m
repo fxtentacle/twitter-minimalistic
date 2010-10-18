@@ -18,6 +18,9 @@
 
 @implementation TwitterForOneUser
 @synthesize username;
+@synthesize userId;
+@synthesize userImage;
+@synthesize userScreenname;
 
 - (id)initializeForUsername:(NSString*) userNameToSet andApp: (id)app {	
 	username = [userNameToSet copy];
@@ -139,17 +142,30 @@
 	[twitterEngine setAccessToken:token];
 	[token storeInUserDefaultsWithServiceProviderName:STORE_KEY prefix:username];
 	
-	[GrowlApplicationBridge
-	 notifyWithTitle:username
-	 description:[NSString stringWithFormat:@"User %@ successfully logged in.", username]
-	 notificationName:@"UserLogin"
-	 iconData:nil
-	 priority:1
-	 isSticky:NO
-	 clickContext:nil];
-	
-	updateTimer = [NSTimer scheduledTimerWithTimeInterval:30.0 target: self selector:@selector(updateStatus:) userInfo: nil repeats: YES];
-	[self updateStatus: updateTimer];
+	[twitterEngine checkUserCredentials];
+}
+
+- (void)accountInfoReceived:(NSDictionary *)accountInfo forRequest:(NSString *)connectionIdentifier
+{
+    NSLog(@"Got account credentials for %@:\r%@", connectionIdentifier, accountInfo);
+    
+    userId = [[accountInfo valueForKey:@"id"] copy];
+    self.userScreenname = [accountInfo valueForKey:@"screen_name"];
+    
+    NSString *url = [accountInfo valueForKey:@"profile_image_url"];
+    self.userImage = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    
+    [GrowlApplicationBridge
+     notifyWithTitle:username
+     description:[NSString stringWithFormat:@"@%@ successfully logged in.", userScreenname]
+     notificationName:@"UserLogin"
+     iconData:userImage
+     priority:1
+     isSticky:NO
+     clickContext:nil];
+    
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval:30.0 target: self selector:@selector(updateStatus:) userInfo: nil repeats: YES];
+    [self updateStatus: updateTimer];
 }
 
 
@@ -218,13 +234,13 @@
 			storeLastId = [status objectForKey:@"id"];
 		NSDictionary* user = [status objectForKey:@"user"];
 		NSURL *url = [NSURL URLWithString: [user objectForKey:@"profile_image_url"]];
-		NSData *userImage = [NSData dataWithContentsOfURL:url];
+		NSData *_userImage = [NSData dataWithContentsOfURL:url];
 
 		[GrowlApplicationBridge
 		 notifyWithTitle:[user objectForKey:@"name"]
 		 description:[status objectForKey:@"text"]
 		 notificationName:@"NewTweetReceived"
-		 iconData:userImage
+		 iconData:_userImage
 		 priority:0
 		 isSticky:NO
 		 clickContext:nil];		
