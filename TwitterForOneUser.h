@@ -13,12 +13,18 @@
 	id myApp;
     MGTwitterEngine *twitterEngine;
 	NSString* username;
+    NSString* userId;
+    NSString* userScreenname;
+    NSData* userImage;
 	OAToken *token;
 	NSTimer* updateTimer;
 	MGTwitterEngineID lastId;
 }
 
 @property (readonly, copy) NSString* username;
+@property (readonly, copy) NSString* userId;
+@property (readwrite, copy) NSData* userImage;
+@property (readwrite, copy) NSString* userScreenname;
 
 - (id)initializeForUsername:(NSString*) username andApp: (id) app;
 + (void)removeAuthorizationForUsername:(NSString*) username;
